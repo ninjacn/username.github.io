@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goto Futu</title>
+</head>
+<body>
+    <p>点击链接跳转</p>
+    <script>
+         const queryString = window.location.search;
+         console.log(queryString);
+         const urlParams = new URLSearchParams(queryString);
+         const market_id = urlParams.get('market_id')
+         console.log(market_id);
+         const code = urlParams.get('code')
+         console.log(code);
+         url = 'ftnn://quote/' + market_id + '/' + code
+         console.log(url)
+         window.location.href = url;
+    </script>
+</body>
+</html>
